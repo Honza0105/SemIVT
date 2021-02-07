@@ -5,7 +5,7 @@ Zadejte polomìr koule: <input type="text" name="r" /> <br />
 <input type="submit" value="Odeslat"/>
 </form>
 
-<?
+<?php
 $r = intval($_POST["r"]);
 $povrch = $_POST["povrch"];
 $objem = $_POST["objem"];

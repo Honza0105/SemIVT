@@ -17,7 +17,7 @@ Do jaké soustavy?
 <input type="submit" value="Odeslat"/>
 </form>
 
-<?
+<?php
 $num = $_POST["number"];
 $from = $_POST['from'];
 $to = $_POST['to'];
