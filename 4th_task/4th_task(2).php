@@ -1,3 +1,4 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2"/>
 <form action="4th_task(2).php" method="POST">
 Číslo: <input type="text" name="number"/><br /><br />
 Z jaké soustavy?
@@ -21,7 +22,7 @@ Do jaké soustavy?
 $num = $_POST["number"];
 $from = $_POST['from'];
 $to = $_POST['to'];
-if (isset($num)==TRUE and $num >= 0 and is_numeric($num) == TRUE)
+if (isset($num)==TRUE and $num >= 0)
 {
     $final = base_convert($num,$from,$to);
     echo 'Číslo '.$num.' v soustavě ';
