@@ -1,0 +1,44 @@
+<form action="4th_task(2).php" method="POST">
+Èíslo: <input type="text" name="number"/><br /><br />
+Z jaké soustavy?
+<select name="from">
+    <option value="10">desítková</option>
+    <option value="16">hexadecimální</option>
+    <option value="2">binární</option>
+</select>
+<br /><br />
+Do jaké soustavy?
+<select name="to">
+    <option value="10">desítková</option>
+    <option value="16">hexadecimální</option>
+    <option value="2">binární</option>
+</select>
+<br /><br />
+<input type="submit" value="Odeslat"/>
+</form>
+
+<?
+$num = $_POST["number"];
+$from = $_POST['from'];
+$to = $_POST['to'];
+if (isset($num)==TRUE and $num >= 0 and is_numeric == TRUE)
+{
+    $final = base_convert($num,$from,$to);
+    echo 'Èíslo '.$num.' v soustavì ';
+    if ($from == '10')
+        {echo 'desítkové';}
+    elseif ($from == '2')
+        {echo 'binární';}
+    elseif ($from == '16')
+        {echo 'hexadecimální';}
+    echo ' je <span style="background-color:yellow">'.$final.'</span> v soustavì ';
+    if ($to == '10')
+        {echo 'desítkové';}
+    elseif ($to == '2')
+        {echo 'binární';}
+    elseif ($to == '16')
+        {echo 'hexadecimální';}
+    echo '.';
+}    
+
+?>
