@@ -21,7 +21,7 @@ Do jaké soustavy?
 $num = $_POST["number"];
 $from = $_POST['from'];
 $to = $_POST['to'];
-if (isset($num)==TRUE and $num >= 0 and is_numeric == TRUE)
+if (isset($num)==TRUE and $num >= 0 and is_numeric($num) == TRUE)
 {
     $final = base_convert($num,$from,$to);
     echo 'Èíslo '.$num.' v soustavì ';
